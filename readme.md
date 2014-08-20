@@ -1,38 +1,17 @@
-# Bones
-A Lightweight Wordpress Development Theme
+# CEJ v.2.1
 
-Bones is designed to make the life of developers easier. It's built
-using HTML5 & has a strong semantic foundation.
-It's constantly growing so be sure to check back often if you are a
-frequent user. I'm always open to contribution. :)
+This is a custom Wordpress theme that I designed and built for my personal portfolio site. My goal is to continuously improve myself so as I learn new skills, my personal website is a playground for me to practice and showcase what I learn.
 
-Designed by Eddie Machado
-http://themble.com/bones
+To speed up this process, I am using the HTML5 <a href="http://themble.com/bones" target="_blank">Bones Wordpress Starter Theme Framework</a> which easily allows me to start coding without having to take the time to create the necessary files. 
 
-License: WTFPL
-License URI: http://sam.zoy.org/wtfpl/
-Are You Serious? Yes.
+#### Features
 
-#### Special Thanks to:
-Paul Irish & the HTML5 Boilerplate
-Yoast for some WP functions & optimization ideas
-Andrew Rogers for code optimization
-David Dellanave for speed & code optimization
-and several other developers. :)
-
-#### Submit Bugs & or Fixes:
-https://github.com/eddiemachado/bones/issues
-
-To view Release & Update Notes, read the log.txt file inside
-the library folder.
-
-For more news and to see why my parents constantly ask me what I'm
-doing with my life, follow me on twitter: @eddiemachado
-
-## Helpful Tools & Links
-
-Yeoman generator to quickly install Bones Wordpress starter theme into your Wordpress theme folder
-by 0dp
-https://github.com/0dp/generator-wp-bones
-
-
+<ul>
+    <li>Responsive Design</li>
+    <li>Progressive Enhancement</li>
+    <li>SASS</li>
+    <li>HTML5</li>
+    <li>Wordpress</li>
+    <li>PHP</li>
+    <li>jQuery / Javascript</li>
+</ul>
