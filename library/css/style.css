@@ -421,12 +421,12 @@ table {
   white-space: nowrap;
   overflow: hidden; }
 
-.clearfix, .cf, .comment-respond {
+.clearfix, .cf {
   zoom: 1; }
-  .clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+  .clearfix:before, .clearfix:after, .cf:before, .cf:after {
     content: "";
     display: table; }
-  .clearfix:after, .cf:after, .comment-respond:after {
+  .clearfix:after, .cf:after {
     clear: both; }
 
 /*
@@ -475,57 +475,6 @@ http://ia.net/blog/responsive-typography-the-basics/
 http://alistapart.com/column/responsive-typography-is-a-physical-discipline
 
 ******************************************************************/
-/*********************
-FONT FACE (IN YOUR FACE)
-*********************/
-/*  To embed your own fonts, use this syntax
-  and place your fonts inside the
-  library/fonts folder. For more information
-  on embedding fonts, go to:
-  http://www.fontsquirrel.com/
-  Be sure to remove the comment brackets.
-*/
-/*  @font-face {
-      font-family: 'Font Name';
-      src: url('library/fonts/font-name.eot');
-      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('library/fonts/font-name.woff') format('woff'),
-             url('library/fonts/font-name.ttf') format('truetype'),
-             url('library/fonts/font-name.svg#font-name') format('svg');
-      font-weight: normal;
-      font-style: normal;
-  }
-*/
-/*
-The following is based of Typebase:
-https://github.com/devinhunt/typebase.css
-I've edited it a bit, but it's a nice starting point.
-*/
-/*
- i imported this one in the functions file so bones would look sweet.
- don't forget to remove it for your site.
-*/
-/*
-some nice typographical defaults
-more here: http://www.newnet-soft.com/blog/csstypography
-*/
-p {
-  -ms-word-break: break-all;
-  -ms-word-wrap: break-all;
-  word-break: break-word;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  -webkit-hyphenate-before: 2;
-  -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3;
-  -webkit-font-feature-settings: "liga", "dlig";
-  -moz-font-feature-settings: "liga=1, dlig=1";
-  -ms-font-feature-settings: "liga", "dlig";
-  -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig"; }
-
 /******************************************************************
 Site Name:
 Author:
@@ -608,11 +557,17 @@ really slow down your CSS. Don't overdo it.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
 /*********************
+BOX SHADOW
+*********************/
+/*********************
 BOX SIZING
 *********************/
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+/*********************
+SHAPES
+*********************/
 /******************************************************************
 Site Name:
 Author:
@@ -905,10 +860,10 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, .comment-reply-link, #submit {
+.blue-btn {
   display: inline-block;
   position: relative;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: white;
   font-size: 0.9em;
@@ -921,10 +876,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .blue-btn:hover, .blue-btn:focus {
     color: white;
     text-decoration: none; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
+  .blue-btn:active {
     top: 1px; }
 
 /*
@@ -932,11 +887,11 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn, .comment-reply-link, #submit {
+.blue-btn {
   background-color: #2980b9; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .blue-btn:hover, .blue-btn:focus {
     background-color: #2574a8; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
+  .blue-btn:active {
     background-color: #2472a4; }
 
 /******************************************************************
@@ -982,14 +937,14 @@ textarea,
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #5c6b80;
+  color: #565656;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   background-color: #eaedf2;
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out; }
@@ -1243,17 +1198,6 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
-/*********************
-GENERAL STYLES
-*********************/
-body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
-  color: #5c6b80;
-  background-color: #eaedf2;
-  -webkit-font-smoothing: antialiased; }
-
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -1294,245 +1238,214 @@ style a page via class
 /* paged items like search results or archives */
 /* individual paged (i.e. body.paged-3) */
 /*********************
-LAYOUT & GRID STYLES
+01. GENERAL STYLES
 *********************/
-.wrap {
-  width: 96%;
-  margin: 0 auto; }
+html, body {
+  background: #171717; }
+
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #565656; }
+
+p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #a1a1a1; }
 
 /*********************
-LINK STYLES
+04. LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
-  /* on hover */
-  /* on click */
-  /* mobile tap color */ }
+  color: #aed66e; }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #6fc8ee; }
   a:link, a:visited:link {
-    /*
-    this highlights links on iPhones/iPads.
-    so it basically works like the :hover selector
-    for mobile devices.
-    */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 /******************************************************************
-H1, H2, H3, H4, H5 STYLES
+05. H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   text-rendering: optimizelegibility;
-  font-weight: 500;
-  /*
-  if you're going to use webfonts, be sure to check your weights
-  http://css-tricks.com/watch-your-font-weight/
-  */
-  /* removing text decoration from all headline links */ }
+  font-weight: 300;
+  text-transform: uppercase; }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #aed66e; }
 
 h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em; }
+  font-size: 1.2rem; }
 
 h2, .h2 {
-  font-size: 1.75em;
-  line-height: 1.4em;
-  margin-bottom: 0.375em; }
+  font-size: 1.1rem;
+  margin-bottom: 0.375rem; }
 
 h3, .h3 {
-  font-size: 1.125em; }
+  font-size: 1rem;
+  letter-spacing: 1px; }
 
 h4, .h4 {
-  font-size: 1.1em;
-  font-weight: 700; }
-
-h5, .h5 {
-  font-size: 0.846em;
-  line-height: 2.09em;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
+  font-size: 0.85em;
+  letter-spacing: 1px;
+  line-height: 18px; }
 
 /*********************
-HEADER STYLES
+06. HEADER STYLES
 *********************/
-.header {
-  background-color: #323944; }
+#header {
+  width: 100%;
+  position: relative;
+  clear: both;
+  height: 100px;
+  padding: 0 10%;
+  background: url("../images/stars_v2.jpg") black no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 95px black;
+  -moz-box-shadow: inset 0 0 95px black;
+  box-shadow: inset 0 0 95px black; }
+  #header #logo {
+    float: left;
+    margin: 0 0 0 10px; }
+    #header #logo img {
+      max-width: 75px;
+      height: auto;
+      width: 100%;
+      margin-bottom: 30px; }
+  #header nav {
+    display: none; }
 
-#logo {
-  margin: 0.75em 0; }
-  #logo a {
-    color: white; }
+nav a {
+  font-family: "Josefin Slab", serif;
+  font-weight: 100;
+  font-style: italic; }
+
+.mobile-nav-button {
+  padding: 0 0 5px 0;
+  border: 1px solid #aed66e;
+  color: #aed66e;
+  font-family: "Josefin Slab", serif;
+  font-style: italic;
+  font-weight: 100;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+  margin-top: 35px; }
+
+.mobile-nav-dropdown {
+  border-top: 1px solid #27360f;
+  text-align: center; }
+  .mobile-nav-dropdown ul {
+    margin: 40px 0;
+    position: relative; }
+    .mobile-nav-dropdown ul li {
+      display: inline-block;
+      text-align: center;
+      margin-right: 6%; }
+      .mobile-nav-dropdown ul li a {
+        text-decoration: none; }
+      .mobile-nav-dropdown ul li:last-child {
+        margin-right: 0 !important; }
+
+.tagline-desktop {
+  display: none;
+  color: #a1a1a1;
+  margin: 10px 0 50px 0; }
+  .tagline-desktop h4 {
+    margin: 0; }
+  .tagline-desktop span {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    text-rendering: optimizelegibility;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    line-height: 5px; }
+
+.tagline-mobile {
+  text-align: center;
+  border-bottom: 1px solid #27360f;
+  border-top: 1px solid #27360f;
+  color: #a1a1a1; }
 
 /*********************
-NAVIGATION STYLES
-*********************/
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-.nav {
-  border-bottom: 0;
-  margin: 0;
-  /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */ }
-  .nav li {
-    /*
-    so you really have to rethink your dropdowns for mobile.
-    you don't want to have it expand too much because the
-    screen is so small. How you manage your menu should
-    depend on the project. Here's some great info on it:
-    http://www.alistapart.com/articles/organizing-mobile/
-    */ }
-    .nav li a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      padding: 0.75em;
-      /*
-      remember this is for mobile ONLY, so there's no need
-      to even declare hover styles here, you can do it in
-      the style.scss file where it's relevant. We want to
-      keep this file as small as possible!
-      */ }
-    .nav li ul.sub-menu li a,
-    .nav li ul.children li a {
-      padding-left: 30px; }
-
-/* end .nav */
-/*********************
-POSTS & CONTENT STYLES
+08. POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 1.5em; }
-
-.hentry {
-  background-color: white;
-  border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #cccccc; }
-  .hentry header {
-    border-bottom: 1px solid #f8f9fa;
-    padding: 1.5em; }
-  .hentry footer {
-    padding: 1.5em;
-    border-top: 1px solid #f8f9fa; }
-    .hentry footer p {
-      margin: 0; }
-
-/* end .hentry */
-.single-title,
-.page-title,
-.entry-title {
-  margin: 0; }
-
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
-/* post meta */
-.byline {
-  color: #9fa6b4;
-  font-style: italic;
-  margin: 0; }
-
-/* entry content */
-.entry-content {
-  padding: 1.5em 1.5em 0;
-  /*
-  image alignment on a screen this size may be
-  a bit difficult. It's set to start aligning
-  and floating images at the next breakpoint,
-  but it's up to you. Feel free to change it up.
-  */ }
-  .entry-content p {
-    margin: 0 0 1.5em; }
-  .entry-content table {
-    width: 100%;
-    border: 1px solid #eaedf2;
-    margin-bottom: 1.5em; }
-    .entry-content table caption {
-      margin: 0 0 7px;
-      font-size: 0.75em;
-      color: #9fa6b4;
-      text-transform: uppercase;
-      letter-spacing: 1px; }
-  .entry-content tr {
-    border-bottom: 1px solid #eaedf2; }
-    .entry-content tr:nth-child(even) {
-      background-color: #f8f9fa; }
-  .entry-content td {
-    padding: 7px;
-    border-right: 1px solid #eaedf2; }
-    .entry-content td:last-child {
-      border-right: 0; }
-  .entry-content th {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #eaedf2;
-    border-right: 1px solid #eaedf2; }
-    .entry-content th:last-child {
-      border-right: 0; }
-  .entry-content blockquote {
-    margin: 0 0 1.5em 0.75em;
-    padding: 0 0 0 0.75em;
-    border-left: 3px solid #2980b9;
+  padding: 10%;
+  width: 99.999999993%;
+  position: relative; }
+  #content #inner-content {
+    text-align: left; }
+    #content #inner-content #hello {
+      padding: 0 8%; }
+      #content #inner-content #hello .hey-there {
+        float: none; }
+      #content #inner-content #hello .intro {
+        font-size: 2rem !important;
+        color: #a1a1a1 !important;
+        font-weight: 300 !important;
+        line-height: 55px; }
+      #content #inner-content #hello .sub-intro {
+        font-size: 1rem !important;
+        color: #a1a1a1 !important;
+        font-weight: 300 !important;
+        font-style: italic; }
+      #content #inner-content #hello .face {
+        max-width: 300px; }
+      #content #inner-content #hello p {
+        text-align: left !important; }
+      #content #inner-content #hello .buttons {
+        margin-top: 60px; }
+        #content #inner-content #hello .buttons a {
+          font-family: "Josefin Slab", serif;
+          font-style: italic;
+          line-height: 40px;
+          text-decoration: none; }
+          #content #inner-content #hello .buttons a div {
+            border: 1px solid #aed66e;
+            text-align: center;
+            max-width: 250px; }
+    #content #inner-content .skill-wrapper {
+      padding: 0 8%;
+      margin: 40px 0 80px; }
+    #content #inner-content .skill {
+      text-align: center;
+      margin: 20px 0;
+      color: #aed66e;
+      font-size: 3rem;
+      font-family: "Josefin Slab", serif;
+      font-weight: 100;
+      font-style: italic;
+      border-bottom-style: double; }
+    #content #inner-content .green {
+      color: #aed66e !important; }
+    #content #inner-content .main-description {
+      border: 1px solid #aed66e;
+      padding: 20px 40px;
+      margin: 40px 8%; }
+      #content #inner-content .main-description p {
+        padding: 0 !important; }
+    #content #inner-content p {
+      padding: 0 8%; }
+    #content #inner-content img {
+      width: 100%;
+      height: auto; }
+  #content .resume li {
+    margin-bottom: 100px; }
+    #content .resume li h2, #content .resume li span {
+      text-decoration: none !important; }
+    #content .resume li p {
+      padding: 0 !important; }
+  #content .resume span {
     font-style: italic;
-    color: #9fa6b4; }
-  .entry-content dd {
-    margin-left: 0;
-    font-size: 0.9em;
-    color: #787878;
-    margin-bottom: 1.5em; }
-  .entry-content img {
-    margin: 0 0 1.5em 0;
-    max-width: 100%;
-    height: auto; }
-  .entry-content .size-auto,
-  .entry-content .size-full,
-  .entry-content .size-large,
-  .entry-content .size-medium,
-  .entry-content .size-thumbnail {
-    max-width: 100%;
-    height: auto; }
-  .entry-content pre {
-    background: #323944;
-    color: #f8f9fa;
-    font-size: 0.9em;
-    padding: 1.5em;
-    margin: 0 0 1.5em;
-    border-radius: 3px; }
-
-/* end .entry-content */
-.wp-caption {
-  max-width: 100%;
-  background: #eee;
-  padding: 5px;
-  /* images inside wp-caption */ }
-  .wp-caption img {
-    max-width: 100%;
-    margin-bottom: 0;
-    width: 100%; }
-  .wp-caption p.wp-caption-text {
-    font-size: 0.85em;
-    margin: 4px 0 7px;
-    text-align: center; }
-
-/* end .wp-caption */
-/* image gallery styles */
-/* end .gallery */
-/* gallery caption styles */
-.tags {
-  margin: 0; }
+    font-family: "Josefin Slab", serif;
+    font-weight: 100;
+    color: #aed66e; }
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -1573,10 +1486,10 @@ PAGE NAVI STYLES
       color: white; }
   .pagination .current {
     cursor: default;
-    color: #5c6b80; }
+    color: #565656; }
     .pagination .current:hover, .pagination .current:focus {
       background-color: white;
-      color: #5c6b80; }
+      color: #565656; }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
@@ -1593,7 +1506,7 @@ COMMENT STYLES
 #comments-title {
   padding: 0.75em;
   margin: 0;
-  border-top: 1px solid #f8f9fa;
+  border-top: 1px solid #a1a1a1;
   /* number of comments span */ }
 
 .commentlist {
@@ -1605,7 +1518,7 @@ COMMENT STYLES
   clear: both;
   overflow: hidden;
   padding: 1.5em;
-  border-bottom: 1px solid #f8f9fa;
+  border-bottom: 1px solid #a1a1a1;
   /* vcard */
   /* end .commentlist .vcard */
   /* end children */
@@ -1649,7 +1562,7 @@ COMMENT STYLES
   .comment.odd {
     background-color: white; }
   .comment.even {
-    background: #f8f9fa; }
+    background: #a1a1a1; }
 
 /* comment meta */
 /* comment content */
@@ -1677,7 +1590,7 @@ COMMENT FORM STYLES
 ******************************************************************/
 .comment-respond {
   padding: 1.5em;
-  border-top: 1px solid #f8f9fa; }
+  border-top: 1px solid #a1a1a1; }
 
 #reply-title {
   margin: 0; }
@@ -1687,14 +1600,14 @@ COMMENT FORM STYLES
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
-    color: #5c6b80; }
+    color: #565656; }
 
 .comment-form-comment {
   margin: 1.5em 0 0.75em; }
 
 .form-allowed-tags {
   padding: 1.5em;
-  background-color: #f8f9fa;
+  background-color: #a1a1a1;
   font-size: 0.9em; }
 
 /* comment submit button */
@@ -1735,19 +1648,63 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
-  color: #f8f9fa; }
+  border-top: 1px solid #0a4f54;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700; }
+  .footer .follow-me {
+    float: right;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 11px 15px 11px 0;
+    color: #a1a1a1;
+    font-style: italic;
+    transform: skew(-20deg);
+    -webkit-transform: skew(-20deg);
+    border-right: 1px solid #0a4f54; }
+    .footer .follow-me .inside {
+      transform: skew(20deg);
+      -webkit-transform: skew(20deg); }
+  .footer .social-media {
+    float: right;
+    margin: 0 40px 0 10px;
+    background: url("../images/stars_v2.jpg") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    transform: skew(-20deg);
+    -webkit-transform: skew(-20deg); }
+    .footer .social-media li {
+      float: left;
+      list-style-type: none;
+      padding: 11px 20px;
+      border-right: 1px solid #171717; }
+      .footer .social-media li:last-child {
+        border-right: none; }
+      .footer .social-media li a {
+        color: white;
+        text-decoration: none; }
+        .footer .social-media li a:hover {
+          color: #171717; }
+      .footer .social-media li:hover a {
+        color: #171717; }
+    .footer .social-media .facebook,
+    .footer .social-media .twitter,
+    .footer .social-media .linkedin {
+      -webkit-transition: all 0.8s ease;
+      transition: all 0.8s ease; }
+      .footer .social-media .facebook a,
+      .footer .social-media .twitter a,
+      .footer .social-media .linkedin a {
+        transform: skew(20deg);
+        -webkit-transform: skew(20deg); }
+    .footer .social-media .facebook:hover {
+      background-color: #38f1c2; }
+    .footer .social-media .twitter:hover {
+      background-color: #6fe6ee; }
+    .footer .social-media .linkedin:hover {
+      background-color: #6fc8ee; }
 
-/*
-if you checked out the link above:
-http://www.alistapart.com/articles/organizing-mobile/
-you'll want to style the footer nav
-a bit more in-depth. Remember to keep
-it simple because you'll have to
-override these styles for the desktop
-view.
-*/
-/* end .footer-links */
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1848,79 +1805,127 @@ you can add resource intensive styles.
   
   ******************************************************************/
   /*********************
-  GENERAL STYLES
-  *********************/
-  /*********************
-  LAYOUT & GRID STYLES
-  *********************/
-  .wrap {
-    width: 760px; }
-
-  /*********************
   HEADER STYLES
   *********************/
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  .nav {
-    border: 0;
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .nav ul {
-      background: #323944;
-      margin-top: 0; }
-    .nav li {
-      float: left;
+  #header {
+    width: 40% !important;
+    float: left;
+    margin: 0 0 0 -20% !important;
+    height: 800px;
+    padding: 0 !important;
+    transform: skew(-6deg);
+    -webkit-transform: skew(-6deg);
+    overflow: hidden; }
+    #header #inner-header {
+      padding-top: 75px;
+      width: 30%;
+      float: right;
+      margin-right: 40px;
+      transform: skew(6deg);
+      -webkit-transform: skew(6deg); }
+    #header #logo {
       position: relative;
-      /*
-      plan your menus and drop-downs wisely.
-      */
-      /* showing sub-menus */ }
-      .nav li a {
-        border-bottom: 0;
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
-        .nav li a:hover, .nav li a:focus {
-          color: white;
-          text-decoration: underline; }
-      .nav li ul.sub-menu,
-      .nav li ul.children {
-        margin-top: 0;
-        border: 1px solid #ccc;
-        border-top: 0;
-        position: absolute;
-        visibility: hidden;
-        z-index: 8999;
-        /* highlight sub-menu current page */ }
-        .nav li ul.sub-menu li,
-        .nav li ul.children li {
-          /*
-          if you need to go deeper, go nuts
-          just remember deeper menus suck
-          for usability. k, bai.
-          */ }
-          .nav li ul.sub-menu li a,
-          .nav li ul.children li a {
-            padding-left: 10px;
-            border-right: 0;
+      text-align: center;
+      float: left;
+      margin-left: 0; }
+      #header #logo img {
+        max-width: 150px; }
+    #header nav {
+      display: block !important;
+      position: relative;
+      margin: 0 auto; }
+      #header nav ul#menu-main-menu {
+        margin-top: 40px;
+        width: 100%;
+        /* end .menu li */
+        /* highlight current page */
+        /* end current highlighters */ }
+        #header nav ul#menu-main-menu li {
+          margin-bottom: 5px; }
+          #header nav ul#menu-main-menu li a {
             display: block;
-            width: 180px;
-            border-bottom: 1px solid #ccc; }
-          .nav li ul.sub-menu li:last-child a,
-          .nav li ul.children li:last-child a {
-            border-bottom: 0; }
-          .nav li ul.sub-menu li ul,
-          .nav li ul.children li ul {
-            top: 0;
-            left: 100%; }
-      .nav li:hover > ul {
-        top: auto;
-        visibility: visible; }
+            text-decoration: none;
+            padding: 5px 0 0 0;
+            text-align: left;
+            letter-spacing: 2px;
+            -webkit-transition: all 0.8s ease;
+            transition: all 0.8s ease; }
+            #header nav ul#menu-main-menu li a:hover {
+              color: #6fc8ee;
+              padding-left: 5px; }
+          #header nav ul#menu-main-menu li:hover {
+            border-bottom: 1px solid #6fc8ee; }
+        #header nav ul#menu-main-menu li.current-menu-item a,
+        #header nav ul#menu-main-menu li.current_page_item a,
+        #header nav ul#menu-main-menu li.current_page_ancestor a {
+          background: url("../images/icons.png") no-repeat;
+          background-size: 40px 9px;
+          background-position: right 13px;
+          opacity: 1; }
 
-  /* end .nav */
+  .tagline-desktop {
+    display: block !important;
+    text-align: left; }
+
+  .tagline-mobile {
+    display: none; }
+
+  .mobile-nav-button,
+  .mobile-nav-dropdown {
+    display: none; }
+
+  /*********************
+  CONTENT
+  *********************/
+  #content {
+    width: 74.30939226%;
+    float: right;
+    padding: 0 !important;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+    margin: 0;
+    overflow: scroll; }
+    #content #inner-content {
+      width: 100%;
+      overflow: scroll;
+      margin-top: 75px; }
+      #content #inner-content #hello {
+        padding: 0 40px 0 10% !important; }
+        #content #inner-content #hello .hey-there {
+          max-width: 700px !important;
+          float: right; }
+        #content #inner-content #hello .intro {
+          font-size: 2rem !important;
+          color: #a1a1a1 !important;
+          font-weight: 300 !important;
+          line-height: 45px; }
+          #content #inner-content #hello .intro .small {
+            font-size: 15px; }
+        #content #inner-content #hello .left {
+          float: right;
+          margin: 50px 0 100px 0;
+          text-align: right; }
+        #content #inner-content #hello .sub-intro {
+          font-size: 1rem !important;
+          color: #a1a1a1 !important;
+          font-weight: 300 !important;
+          font-style: italic; }
+        #content #inner-content #hello img {
+          float: right;
+          max-width: 250px !important;
+          padding: 0 !important;
+          display: block !important; }
+      #content #inner-content p {
+        padding: 0 15% !important; }
+      #content #inner-content img {
+        max-width: 100%;
+        padding: 0 15%; }
+      #content #inner-content .main-description {
+        margin: 50px 15%; }
+      #content #inner-content .skill-wrapper {
+        padding: 0 15%; }
+
   /*********************
   SIDEBARS & ASIDES
   *********************/
@@ -1955,19 +1960,10 @@ you can add resource intensive styles.
   /*********************
   FOOTER STYLES
   *********************/
-  /*
-  you'll probably need to do quite a bit
-  of overriding here if you styled them for
-  mobile. Make sure to double check these!
-  */
-  .footer-links ul li {
-    /*
-    be careful with the depth of your menus.
-    it's very rare to have multi-depth menus in
-    the footer.
-    */ }
-
-  /* end .footer-links */ }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%; } }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -2102,6 +2098,7 @@ be set to display none.
 
   @page {
     margin: 0.5cm; }
+
   p, h2, h3 {
     orphans: 3;
     widows: 3; }

@@ -43,6 +43,22 @@ http://sachagreif.com/sass-color-variables/
 Site Name:
 Author:
 
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
 Stylesheet: Mixins Stylesheet
 
 This is where you can take advantage of Sass' great features: Mixins.
@@ -76,11 +92,17 @@ really slow down your CSS. Don't overdo it.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
 /*********************
+BOX SHADOW
+*********************/
+/*********************
 BOX SIZING
 *********************/
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+/*********************
+SHAPES
+*********************/
 /******************************************************************
 Site Name:
 Author:
@@ -181,76 +203,127 @@ come into play. Have fun!
 
 ******************************************************************/
 /*********************
-GENERAL STYLES
-*********************/
-/*********************
-LAYOUT & GRID STYLES
-*********************/
-.wrap {
-  width: 760px; }
-
-/*********************
 HEADER STYLES
 *********************/
-/*********************
-NAVIGATION STYLES
-*********************/
-.nav {
-  border: 0;
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */ }
-  .nav ul {
-    margin-top: 0; }
-  .nav li {
-    float: left;
+#header {
+  width: 40% !important;
+  float: left;
+  margin: 0 0 0 -20% !important;
+  height: 800px;
+  padding: 0 !important;
+  transform: skew(-6deg);
+  -webkit-transform: skew(-6deg);
+  overflow: hidden; }
+  #header #inner-header {
+    padding-top: 75px;
+    width: 30%;
+    float: right;
+    margin-right: 40px;
+    transform: skew(6deg);
+    -webkit-transform: skew(6deg); }
+  #header #logo {
     position: relative;
-    /*
-    plan your menus and drop-downs wisely.
-    */
-    /* showing sub-menus */ }
-    .nav li a {
-      border-bottom: 0;
-      /*
-      you can use hover styles here even though this size
-      has the possibility of being a mobile device.
-      */ }
-      .nav li a:hover, .nav li a:focus {
-        color: white;
-        text-decoration: underline; }
-    .nav li ul.sub-menu,
-    .nav li ul.children {
-      margin-top: 0;
-      border: 1px solid #ccc;
-      border-top: 0;
-      position: absolute;
-      overflow: hidden;
-      visibility: hidden;
-      z-index: 8999;
-      /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
-      .nav li ul.children li {
-        /*
-        if you need to go deeper, go nuts
-        just remember deeper menus suck
-        for usability. k, bai.
-        */ }
-        .nav li ul.sub-menu li a,
-        .nav li ul.children li a {
-          padding-left: 10px;
-          border-right: 0;
+    text-align: center;
+    float: left;
+    margin-left: 0; }
+    #header #logo img {
+      max-width: 150px; }
+  #header nav {
+    display: block !important;
+    position: relative;
+    margin: 0 auto; }
+    #header nav ul#menu-main-menu {
+      margin-top: 40px;
+      width: 100%;
+      /* end .menu li */
+      /* highlight current page */
+      /* end current highlighters */ }
+      #header nav ul#menu-main-menu li {
+        margin-bottom: 5px; }
+        #header nav ul#menu-main-menu li a {
           display: block;
-          width: 180px;
-          border-bottom: 1px solid #ccc; }
-        .nav li ul.sub-menu li:last-child a,
-        .nav li ul.children li:last-child a {
-          border-bottom: 0; }
-    .nav li:hover ul {
-      top: auto;
-      overflow: visible;
-      visibility: visible; }
+          text-decoration: none;
+          padding: 5px 0 0 0;
+          text-align: left;
+          letter-spacing: 2px;
+          -webkit-transition: all 0.8s ease;
+          transition: all 0.8s ease; }
+          #header nav ul#menu-main-menu li a:hover {
+            color: #6fc8ee;
+            padding-left: 5px; }
+        #header nav ul#menu-main-menu li:hover {
+          border-bottom: 1px solid #6fc8ee; }
+      #header nav ul#menu-main-menu li.current-menu-item a,
+      #header nav ul#menu-main-menu li.current_page_item a,
+      #header nav ul#menu-main-menu li.current_page_ancestor a {
+        background: url("../images/icons.png") no-repeat;
+        background-size: 40px 9px;
+        background-position: right 13px;
+        opacity: 1; }
 
-/* end .nav */
+.tagline-desktop {
+  display: block !important;
+  text-align: left; }
+
+.tagline-mobile {
+  display: none; }
+
+.mobile-nav-button,
+.mobile-nav-dropdown {
+  display: none; }
+
+/*********************
+CONTENT
+*********************/
+#content {
+  width: 74.30939226%;
+  float: right;
+  padding: 0 !important;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  margin: 0;
+  overflow: scroll; }
+  #content #inner-content {
+    width: 100%;
+    overflow: scroll;
+    margin-top: 75px; }
+    #content #inner-content #hello {
+      padding: 0 40px 0 10% !important; }
+      #content #inner-content #hello .hey-there {
+        max-width: 700px !important;
+        float: right; }
+      #content #inner-content #hello .intro {
+        font-size: 2rem !important;
+        color: #a1a1a1 !important;
+        font-weight: 300 !important;
+        line-height: 45px; }
+        #content #inner-content #hello .intro .small {
+          font-size: 15px; }
+      #content #inner-content #hello .left {
+        float: right;
+        margin: 50px 0 100px 0;
+        text-align: right; }
+      #content #inner-content #hello .sub-intro {
+        font-size: 1rem !important;
+        color: #a1a1a1 !important;
+        font-weight: 300 !important;
+        font-style: italic; }
+      #content #inner-content #hello img {
+        float: right;
+        max-width: 250px !important;
+        padding: 0 !important;
+        display: block !important; }
+    #content #inner-content p {
+      padding: 0 15% !important; }
+    #content #inner-content img {
+      max-width: 100%;
+      padding: 0 15%; }
+    #content #inner-content .main-description {
+      margin: 50px 15%; }
+    #content #inner-content .skill-wrapper {
+      padding: 0 15%; }
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -285,19 +358,11 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links ul li {
-  /*
-  be careful with the depth of your menus.
-  it's very rare to have multi-depth menus in
-  the footer.
-  */ }
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
 
-/* end .footer-links */
 /******************************************************************
 Site Name:
 Author:

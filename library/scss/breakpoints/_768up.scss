@@ -12,130 +12,180 @@ come into play. Have fun!
 
 ******************************************************************/
 
-
-/*********************
-GENERAL STYLES
-*********************/
-
-body {}
-
-/*********************
-LAYOUT & GRID STYLES
-*********************/
-
-.wrap {
-	width: 760px;
-}
-
 /*********************
 HEADER STYLES
 *********************/
 
-.header {}
+#header {
+	width:40% !important;
+  	float: left;
+  	margin: 0 0 0 -20% !important;
+  	height: 800px;
+  	padding: 0 !important;
+  	@include parallelogramRight(-6deg);
+  	overflow: hidden;
 
-	#logo {}
+  	#inner-header {
+  		padding-top: 75px;
+  		width: 30%;
+		float: right;
+		margin-right: 40px;
+		@include parallelogramRight(6deg);
+  	}
 
-/*********************
-NAVIGATION STYLES
-*********************/
-
-.nav {
-	border: 0;
-	ul {
-		background:$black;
-		margin-top:0;
-	}
-	li {
-		float: left;
+	#logo {
 		position: relative;
+		text-align: center;
+		float: left;
+		margin-left: 0;
 
-		a {
-			border-bottom: 0;
-
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-			&:hover, &:focus {
-				color: $white;
-				text-decoration: underline;
-			}
+		img {
+			max-width: 150px;
 		}
+	}
 
-		&:first-child {}
-		&:last-child {}
+	nav {
+		display: block !important;
+		position: relative;
+		margin: 0 auto;
 
-		/*
-		plan your menus and drop-downs wisely.
-		*/
-		ul.sub-menu,
-		ul.children {
-			margin-top: 0;
-			border: 1px solid #ccc;
-			border-top: 0;
-			position: absolute;
-			visibility: hidden;
-			z-index: 8999;
+		ul#menu-main-menu {
+			margin-top: 40px;
+			width: 100%;
 
 			li {
+				margin-bottom: 5px;
 
 				a {
-					padding-left: 10px;
-					border-right: 0;
 					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
+					text-decoration: none;
+					padding: 5px 0 0 0;
+					text-align: left;
+					letter-spacing: 2px;
+					@include transition(all 0.8s ease);
+					
 
-					&:hover,
-					&:focus {}
-
-					&:link {}
-				}
-
-				&:first-child {}
-
-				&:last-child {
-
-					a {
-						border-bottom: 0;
+					&:hover {
+							color: $link-hover;
+							padding-left: 5px;
 					}
 				}
 
-				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-				ul {
-					top:0;
-					left:100%;
+				&:hover {
+					border-bottom: 1px solid $t3;
 				}
-			}
 
-			/* highlight sub-menu current page */
+			} /* end .menu li */
+
+			/* highlight current page */
 			li.current-menu-item,
 			li.current_page_item,
 			li.current_page_ancestor {
-				a {}
+
+				a {
+					background: url('../images/icons.png') no-repeat;
+					background-size: 40px 9px;
+					background-position: right 13px;
+					opacity: 1;
+				}
+
+			}  /* end current highlighters */
+		}
+	}
+}
+
+.tagline-desktop {
+	display: block !important;
+	text-align: left;
+}
+
+.tagline-mobile {
+	display: none;
+}
+
+.mobile-nav-button,
+.mobile-nav-dropdown {
+	display: none;
+}
+
+/*********************
+CONTENT
+*********************/
+
+#content {
+	width: 74.30939226%;
+  	float: right;
+  	padding: 0 !important;
+  	border-right: 0;
+  	border-top: 0;
+  	border-bottom: 0;
+  	margin: 0;
+  	overflow: scroll;
+
+  	#inner-content {
+  		width: 100%;
+  		overflow: scroll;
+  		margin-top: 75px;
+
+  		#hello {
+			padding: 0 40px 0 10% !important;
+
+			.hey-there {
+				max-width: 700px !important;
+				float: right;
+				// margin-right: 40px;
+			}
+
+			.intro {
+				font-size:2rem !important;
+				color: $light-gray !important;
+				font-weight: 300 !important;
+				line-height: 45px;
+
+				.small {
+					font-size: 15px;
+				}
+			}
+
+			.left {
+				float: right;
+				margin: 50px 0 100px 0;
+				text-align: right;
+			}
+
+			.sub-intro {
+				font-size:1rem !important;
+				color: $light-gray !important;
+				font-weight: 300 !important;
+				font-style: italic;
+			}
+
+			img {
+				float: right;
+				max-width: 250px !important;
+				padding: 0 !important;
+				display: block !important;
 			}
 		}
 
-		/* showing sub-menus */
-		&:hover > ul {
-			top: auto;
-			visibility:visible;
+		p {
+			padding: 0 15% !important;
 		}
 
-	} /* end .menu ul li */
+		img {
+			max-width: 100%;
+			padding: 0 15%;
+		}
 
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-		a {}
-	}  /* end current highlighters */
+		.main-description {
+			margin: 50px 15%;
+		}
 
-} /* end .nav */
+		.skill-wrapper {
+			padding: 0 15%;
+		}
+  	}
+}
 
 /*********************
 SIDEBARS & ASIDES
@@ -264,24 +314,9 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links {
-	ul {
-		li {
-			a {
-				&:hover {}
-			}
-			/*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
-		}
-	}
-} /* end .footer-links */
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
 

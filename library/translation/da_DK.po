@@ -12,7 +12,7 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-KeywordsList: __;_e;_n\n"
 "X-Poedit-Basepath: /home/fulgor/GIT/bones\n"
-"Last-Translator: \n"
+"Last-Transsans-serifr: \n"
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: /home/fulgor/GIT/bones\n"
 

@@ -57,6 +57,16 @@ really slow down your CSS. Don't overdo it.
 }
 
 /*********************
+BOX SHADOW
+*********************/
+
+@mixin boxShadow($x: 0, $y: 0, $radius: 4px, $spread: 5, $color: rgba(0,0,0,0.6)) {
+  -webkit-box-shadow: $x $y $radius $spread $color;
+     -moz-box-shadow: $x $y $radius $spread $color;
+      box-shadow: $x $y $radius $spread $color; 
+}
+
+/*********************
 BOX SIZING
 *********************/
 
@@ -68,6 +78,15 @@ probably best not to use it. I mean, were you going to anyway? */
 	-moz-box-sizing:    $type;
 	-ms-box-sizing:     $type;
 	box-sizing:         $type;
+}
+
+/*********************
+SHAPES
+*********************/
+
+@mixin parallelogramRight($deg) {
+     transform: skew($deg); 
+     -webkit-transform: skew($deg);
 }
 
 
