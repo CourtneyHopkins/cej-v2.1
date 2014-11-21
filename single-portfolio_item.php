@@ -1,27 +1,12 @@
-<?php
-/*
- * CUSTOM POST TYPE TEMPLATE
- *
- * This is the custom post type post template. If you edit the post type name, you've got
- * to change the name of this template to reflect that name change.
- *
- * For Example, if your custom post type is "register_post_type( 'bookmarks')",
- * then your single template should be single-bookmarks.php
- *
- * Be aware that you should rename 'custom_cat' and 'custom_tag' to the appropiate custom
- * category and taxonomy slugs, or this template will not finish to load properly.
- *
- * For more info: http://codex.wordpress.org/Post_Type_Templates
-*/
-?>
-
 <?php get_header(); ?>
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf">
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+					<h1>Work</h1>
+
+						<div id="main" class="m-all t-all d-all cf" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -91,7 +76,6 @@
 
 						</div>
 
-						<?php get_sidebar(); ?>
 
 				</div>
 

@@ -46,6 +46,18 @@ Be careful with these since they can
 really slow down your CSS. Don't overdo it.
 *********************/
 
+@mixin borderRadius($x) {
+  -webkit-border-radius: $x; 
+  -moz-border-radius: $x; 
+  border-radius: $x; 
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
 @mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
 	background-color: $to;
@@ -54,6 +66,17 @@ really slow down your CSS. Don't overdo it.
 	background-image: -moz-linear-gradient(top, $from, $to);
 	background-image: -o-linear-gradient(top, $from, $to);
 	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+@mixin gradientBorder() {
+  @include css-gradient($t1, $t3);
+  opacity: 0.4;
+  @include transition(all 0.8s ease);
+
+  &:hover {
+    @include css-gradient($t3, $t1);    
+    opacity: 1;
+  }
 }
 
 /*********************

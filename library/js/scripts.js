@@ -27,9 +27,15 @@ jQuery(document).ready(function($) {
         if($('#content').height() != $(window).height()) {
             $('#content').height($(window).height());
         }
-    }
 
-    loadGravatars();
+        var x = 0;
+        setInterval(function(){
+            x-=1;
+            $('#header').css('background-position', x + 'px 0');
+        }, 80);
+
+        loadGravatars();
+    }
 
     $('.mobile-nav-button').click(function() {
         $('.mobile-nav-dropdown').slideToggle('fast');

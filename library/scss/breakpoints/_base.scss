@@ -57,7 +57,7 @@ style a page via class
 *********************/
 
 html, body {
-	background: $dark-gray;
+	background: $black;
 }
 
 body {
@@ -139,9 +139,10 @@ h4, .h4 {
 	clear: both;
 	height: 100px;
 	padding: 0 10%;
-	// border-right: 2px solid darken($t1, 45%);
-	background: url('../images/stars_v2.jpg') $black no-repeat;
+	border-right: 2px solid darken($light-gray, 50%);
+	background: url('../images/stars_v4.jpg') $black repeat;
 	background-size: cover;
+	background-position: bottom left;
 	-webkit-box-shadow: inset 0 0 95px $black;
 	   -moz-box-shadow: inset 0 0 95px $black;
 			box-shadow: inset 0 0 95px $black;
@@ -254,6 +255,27 @@ nav {
 
 			.hey-there {
 				float: none;
+				opacity: 0.4;
+			}
+
+			.circles {
+				width: 100%;
+
+				.round {
+					margin: 0 auto;
+					width: 150px;
+					height: 150px;
+					@include gradientBorder();
+					@include borderRadius(50%);
+
+					.inner-round {
+						background-color: $black;
+						width: 148px;
+						height: 148px;
+						margin: 1px 0 0 1px;
+						@include borderRadius(50%);
+					}
+				}
 			}
 
 			.intro {
@@ -292,6 +314,48 @@ nav {
 						text-align: center;
 						max-width: 250px;
 					}
+				}
+			}
+		}
+
+		.page-header {
+			width: 100%;
+			text-align: right;
+			padding-right: 40px;
+
+			span {
+				font-family: $serif;
+				color: $green;
+				font-size: 50px;
+			}
+		}
+
+		.divider {
+			background-color: #AED66E;
+			background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6FC8EE), to(#AED66E), color-stop(.5,#38F1C2));
+			background: -moz-linear-gradient(top, #6FC8EE 0%, #38F1C2 50%, #AED66E 100%);
+			width: 100%;
+			height: 1px;
+		}
+
+		article {
+			margin: 50px 0;
+
+			a {
+				text-decoration: none;
+			}
+
+			.meta-circle {
+				border-radius: 50%;
+				border: 1px solid $light-gray;
+				width: 100px;
+				height: 100px;
+				float: left;
+				text-align: center;
+				padding-top: 12px;
+
+				span {
+					font-size: 30px;
 				}
 			}
 		}
@@ -731,10 +795,11 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	border-top: 1px solid darken($t2, 50%);
+	border-top: 1px solid darken($t2, 40%);
 	text-transform: uppercase;
 	font-size: 0.7rem;
 	font-weight: 700;
+	background: $black;
 
 	.follow-me {
 		float: right;
@@ -745,7 +810,7 @@ FOOTER STYLES
 		color: $light-gray;
 		font-style: italic;
 		@include parallelogramRight(-20deg);
-		border-right: 1px solid darken($t2, 50%);
+		border-right: 1px solid darken($t2, 40%);
 
 		.inside {
 			@include parallelogramRight(20deg);
@@ -755,7 +820,7 @@ FOOTER STYLES
 	.social-media {
 		float: right;
 		margin: 0 40px 0 10px;
-		background: url('../images/stars_v2.jpg') no-repeat;
+		background: url('../images/stars_v3.jpg') no-repeat;
 		background-size: cover;
 		background-position: bottom;
 		@include parallelogramRight(-20deg);
@@ -801,7 +866,7 @@ FOOTER STYLES
 			// background-color: darken(#1c424b, 30%);
 
 			&:hover {
-				background-color: $t1;
+				background-color: $t3;
 			}
 		}
 
@@ -809,7 +874,7 @@ FOOTER STYLES
 			// background-color: darken($t2, 30%);
 
 			&:hover {
-				background-color: $t2;
+				background-color: $t1;
 			}
 		}
 
@@ -817,7 +882,7 @@ FOOTER STYLES
 			// background-color: darken($t3, 30%);
 
 			&:hover {
-				background-color: $t3;
+				background-color: $green;
 			}
 		}
 	}

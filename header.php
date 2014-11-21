@@ -28,8 +28,8 @@
     <body <?php body_class(); ?>>
         <div id="container">
             <header id="header" role="banner">
-                <div id="inner-header" class="cf">
-                    <div id="logo">
+                <div id="inner-header">
+                    <div id="logo" class="cf">
                         <a href="<?php echo home_url(); ?>" rel="nofollow">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/logo_green_v2.png" /><br />
                         </a>
@@ -39,7 +39,7 @@
                             <h4>Design</h4>
                         </div>
                     </div>
-                    <nav role="navigation">
+                    <nav role="navigation" class="cf">
 						<?php wp_nav_menu(array(
                             'container' => false,                           // remove nav container
                             'container_class' => 'menu cf',           // class of container (should you choose to use it)

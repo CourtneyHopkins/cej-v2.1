@@ -45,16 +45,17 @@ HEADER STYLES
 	}
 
 	nav {
-		display: block !important;
+		display: inline-block !important;
 		position: relative;
 		margin: 0 auto;
+		width: 100%;
 
 		ul#menu-main-menu {
-			margin-top: 40px;
 			width: 100%;
 
 			li {
 				margin-bottom: 5px;
+				width: 100%;
 
 				a {
 					display: block;
@@ -72,7 +73,7 @@ HEADER STYLES
 				}
 
 				&:hover {
-					border-bottom: 1px solid $t3;
+					border-bottom: 1px solid $t1;
 				}
 
 			} /* end .menu li */
@@ -81,12 +82,11 @@ HEADER STYLES
 			li.current-menu-item,
 			li.current_page_item,
 			li.current_page_ancestor {
+				border-bottom: 1px solid $t1;
 
 				a {
-					background: url('../images/icons.png') no-repeat;
-					background-size: 40px 9px;
-					background-position: right 13px;
-					opacity: 1;
+					color: $link-hover;
+					padding-left: 5px;
 				}
 
 			}  /* end current highlighters */
@@ -136,6 +136,15 @@ CONTENT
 				// margin-right: 40px;
 			}
 
+			.circles {
+				float: right;
+
+				.round {
+					float: left;
+					margin-left: 8px;
+				}
+			}
+
 			.intro {
 				font-size:2rem !important;
 				color: $light-gray !important;
@@ -149,7 +158,7 @@ CONTENT
 
 			.left {
 				float: right;
-				margin: 50px 0 100px 0;
+				margin: 40px 0 40px 0;
 				text-align: right;
 			}
 

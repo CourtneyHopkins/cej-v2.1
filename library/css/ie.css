@@ -90,6 +90,11 @@ CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
 *********************/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
 /*********************
 BOX SHADOW
@@ -229,17 +234,18 @@ HEADER STYLES
     #header #logo img {
       max-width: 150px; }
   #header nav {
-    display: block !important;
+    display: inline-block !important;
     position: relative;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
     #header nav ul#menu-main-menu {
-      margin-top: 40px;
       width: 100%;
       /* end .menu li */
       /* highlight current page */
       /* end current highlighters */ }
       #header nav ul#menu-main-menu li {
-        margin-bottom: 5px; }
+        margin-bottom: 5px;
+        width: 100%; }
         #header nav ul#menu-main-menu li a {
           display: block;
           text-decoration: none;
@@ -249,17 +255,19 @@ HEADER STYLES
           -webkit-transition: all 0.8s ease;
           transition: all 0.8s ease; }
           #header nav ul#menu-main-menu li a:hover {
-            color: #6fc8ee;
+            color: #38f1c2;
             padding-left: 5px; }
         #header nav ul#menu-main-menu li:hover {
-          border-bottom: 1px solid #6fc8ee; }
-      #header nav ul#menu-main-menu li.current-menu-item a,
-      #header nav ul#menu-main-menu li.current_page_item a,
-      #header nav ul#menu-main-menu li.current_page_ancestor a {
-        background: url("../images/icons.png") no-repeat;
-        background-size: 40px 9px;
-        background-position: right 13px;
-        opacity: 1; }
+          border-bottom: 1px solid #38f1c2; }
+      #header nav ul#menu-main-menu li.current-menu-item,
+      #header nav ul#menu-main-menu li.current_page_item,
+      #header nav ul#menu-main-menu li.current_page_ancestor {
+        border-bottom: 1px solid #38f1c2; }
+        #header nav ul#menu-main-menu li.current-menu-item a,
+        #header nav ul#menu-main-menu li.current_page_item a,
+        #header nav ul#menu-main-menu li.current_page_ancestor a {
+          color: #38f1c2;
+          padding-left: 5px; }
 
 .tagline-desktop {
   display: block !important;
@@ -293,6 +301,11 @@ CONTENT
       #content #inner-content #hello .hey-there {
         max-width: 700px !important;
         float: right; }
+      #content #inner-content #hello .circles {
+        float: right; }
+        #content #inner-content #hello .circles .round {
+          float: left;
+          margin-left: 8px; }
       #content #inner-content #hello .intro {
         font-size: 2rem !important;
         color: #a1a1a1 !important;
@@ -302,7 +315,7 @@ CONTENT
           font-size: 15px; }
       #content #inner-content #hello .left {
         float: right;
-        margin: 50px 0 100px 0;
+        margin: 40px 0 40px 0;
         text-align: right; }
       #content #inner-content #hello .sub-intro {
         font-size: 1rem !important;

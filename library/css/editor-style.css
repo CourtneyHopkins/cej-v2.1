@@ -305,6 +305,11 @@ body#tinymce.wp-editor {
   Be careful with these since they can
   really slow down your CSS. Don't overdo it.
   *********************/
+  /*********************
+  CSS3 GRADIENTS
+  Be careful with these since they can
+  really slow down your CSS. Don't overdo it.
+  *********************/
   /* @include css-gradient(#dfdfdf,#f8f8f8); */
   /*********************
   BOX SHADOW
@@ -533,11 +538,11 @@ body#tinymce.wp-editor {
     font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
     font-style: italic; }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-    color: #aed66e;
+    color: #6fc8ee;
     /* on hover */
     /* on click */ }
     body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-      color: #6fc8ee; }
+      color: #38f1c2; }
     body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
   body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {

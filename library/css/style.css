@@ -555,6 +555,11 @@ CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
 *********************/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
 /*********************
 BOX SHADOW
@@ -1241,7 +1246,7 @@ style a page via class
 01. GENERAL STYLES
 *********************/
 html, body {
-  background: #171717; }
+  background: black; }
 
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -1258,9 +1263,9 @@ p {
 04. LINK STYLES
 *********************/
 a, a:visited {
-  color: #aed66e; }
+  color: #6fc8ee; }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #6fc8ee; }
+    color: #38f1c2; }
   a:link, a:visited:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
@@ -1274,7 +1279,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-transform: uppercase; }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none;
-    color: #aed66e; }
+    color: #6fc8ee; }
 
 h1, .h1 {
   font-size: 1.2rem; }
@@ -1301,8 +1306,10 @@ h4, .h4 {
   clear: both;
   height: 100px;
   padding: 0 10%;
-  background: url("../images/stars_v2.jpg") black no-repeat;
+  border-right: 2px solid #212121;
+  background: url("../images/stars_v4.jpg") black repeat;
   background-size: cover;
+  background-position: bottom left;
   -webkit-box-shadow: inset 0 0 95px black;
   -moz-box-shadow: inset 0 0 95px black;
   box-shadow: inset 0 0 95px black; }
@@ -1384,7 +1391,42 @@ nav a {
     #content #inner-content #hello {
       padding: 0 8%; }
       #content #inner-content #hello .hey-there {
-        float: none; }
+        float: none;
+        opacity: 0.4; }
+      #content #inner-content #hello .circles {
+        width: 100%; }
+        #content #inner-content #hello .circles .round {
+          margin: 0 auto;
+          width: 150px;
+          height: 150px;
+          background-color: #6fc8ee;
+          background-image: -webkit-gradient(linear, left top, left bottom, from(#38f1c2), to(#6fc8ee));
+          background-image: -webkit-linear-gradient(top, #38f1c2, #6fc8ee);
+          background-image: -moz-linear-gradient(top, #38f1c2, #6fc8ee);
+          background-image: -o-linear-gradient(top, #38f1c2, #6fc8ee);
+          background-image: linear-gradient(to bottom, #38f1c2, #6fc8ee);
+          opacity: 0.4;
+          -webkit-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%; }
+          #content #inner-content #hello .circles .round:hover {
+            background-color: #38f1c2;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#6fc8ee), to(#38f1c2));
+            background-image: -webkit-linear-gradient(top, #6fc8ee, #38f1c2);
+            background-image: -moz-linear-gradient(top, #6fc8ee, #38f1c2);
+            background-image: -o-linear-gradient(top, #6fc8ee, #38f1c2);
+            background-image: linear-gradient(to bottom, #6fc8ee, #38f1c2);
+            opacity: 1; }
+          #content #inner-content #hello .circles .round .inner-round {
+            background-color: black;
+            width: 148px;
+            height: 148px;
+            margin: 1px 0 0 1px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%; }
       #content #inner-content #hello .intro {
         font-size: 2rem !important;
         color: #a1a1a1 !important;
@@ -1410,6 +1452,34 @@ nav a {
             border: 1px solid #aed66e;
             text-align: center;
             max-width: 250px; }
+    #content #inner-content .page-header {
+      width: 100%;
+      text-align: right;
+      padding-right: 40px; }
+      #content #inner-content .page-header span {
+        font-family: "Josefin Slab", serif;
+        color: #aed66e;
+        font-size: 50px; }
+    #content #inner-content .divider {
+      background-color: #AED66E;
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6fc8ee), to(#aed66e), color-stop(0.5, #38f1c2));
+      background: -moz-linear-gradient(top, #6fc8ee 0%, #38f1c2 50%, #aed66e 100%);
+      width: 100%;
+      height: 1px; }
+    #content #inner-content article {
+      margin: 50px 0; }
+      #content #inner-content article a {
+        text-decoration: none; }
+      #content #inner-content article .meta-circle {
+        border-radius: 50%;
+        border: 1px solid #a1a1a1;
+        width: 100px;
+        height: 100px;
+        float: left;
+        text-align: center;
+        padding-top: 12px; }
+        #content #inner-content article .meta-circle span {
+          font-size: 30px; }
     #content #inner-content .skill-wrapper {
       padding: 0 8%;
       margin: 40px 0 80px; }
@@ -1648,10 +1718,11 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  border-top: 1px solid #0a4f54;
+  border-top: 1px solid #0f7a82;
   text-transform: uppercase;
   font-size: 0.7rem;
-  font-weight: 700; }
+  font-weight: 700;
+  background: black; }
   .footer .follow-me {
     float: right;
     text-transform: uppercase;
@@ -1662,14 +1733,14 @@ FOOTER STYLES
     font-style: italic;
     transform: skew(-20deg);
     -webkit-transform: skew(-20deg);
-    border-right: 1px solid #0a4f54; }
+    border-right: 1px solid #0f7a82; }
     .footer .follow-me .inside {
       transform: skew(20deg);
       -webkit-transform: skew(20deg); }
   .footer .social-media {
     float: right;
     margin: 0 40px 0 10px;
-    background: url("../images/stars_v2.jpg") no-repeat;
+    background: url("../images/stars_v3.jpg") no-repeat;
     background-size: cover;
     background-position: bottom;
     transform: skew(-20deg);
@@ -1699,11 +1770,11 @@ FOOTER STYLES
         transform: skew(20deg);
         -webkit-transform: skew(20deg); }
     .footer .social-media .facebook:hover {
-      background-color: #38f1c2; }
-    .footer .social-media .twitter:hover {
-      background-color: #6fe6ee; }
-    .footer .social-media .linkedin:hover {
       background-color: #6fc8ee; }
+    .footer .social-media .twitter:hover {
+      background-color: #38f1c2; }
+    .footer .social-media .linkedin:hover {
+      background-color: #aed66e; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -1831,17 +1902,18 @@ you can add resource intensive styles.
       #header #logo img {
         max-width: 150px; }
     #header nav {
-      display: block !important;
+      display: inline-block !important;
       position: relative;
-      margin: 0 auto; }
+      margin: 0 auto;
+      width: 100%; }
       #header nav ul#menu-main-menu {
-        margin-top: 40px;
         width: 100%;
         /* end .menu li */
         /* highlight current page */
         /* end current highlighters */ }
         #header nav ul#menu-main-menu li {
-          margin-bottom: 5px; }
+          margin-bottom: 5px;
+          width: 100%; }
           #header nav ul#menu-main-menu li a {
             display: block;
             text-decoration: none;
@@ -1851,17 +1923,19 @@ you can add resource intensive styles.
             -webkit-transition: all 0.8s ease;
             transition: all 0.8s ease; }
             #header nav ul#menu-main-menu li a:hover {
-              color: #6fc8ee;
+              color: #38f1c2;
               padding-left: 5px; }
           #header nav ul#menu-main-menu li:hover {
-            border-bottom: 1px solid #6fc8ee; }
-        #header nav ul#menu-main-menu li.current-menu-item a,
-        #header nav ul#menu-main-menu li.current_page_item a,
-        #header nav ul#menu-main-menu li.current_page_ancestor a {
-          background: url("../images/icons.png") no-repeat;
-          background-size: 40px 9px;
-          background-position: right 13px;
-          opacity: 1; }
+            border-bottom: 1px solid #38f1c2; }
+        #header nav ul#menu-main-menu li.current-menu-item,
+        #header nav ul#menu-main-menu li.current_page_item,
+        #header nav ul#menu-main-menu li.current_page_ancestor {
+          border-bottom: 1px solid #38f1c2; }
+          #header nav ul#menu-main-menu li.current-menu-item a,
+          #header nav ul#menu-main-menu li.current_page_item a,
+          #header nav ul#menu-main-menu li.current_page_ancestor a {
+            color: #38f1c2;
+            padding-left: 5px; }
 
   .tagline-desktop {
     display: block !important;
@@ -1895,6 +1969,11 @@ you can add resource intensive styles.
         #content #inner-content #hello .hey-there {
           max-width: 700px !important;
           float: right; }
+        #content #inner-content #hello .circles {
+          float: right; }
+          #content #inner-content #hello .circles .round {
+            float: left;
+            margin-left: 8px; }
         #content #inner-content #hello .intro {
           font-size: 2rem !important;
           color: #a1a1a1 !important;
@@ -1904,7 +1983,7 @@ you can add resource intensive styles.
             font-size: 15px; }
         #content #inner-content #hello .left {
           float: right;
-          margin: 50px 0 100px 0;
+          margin: 40px 0 40px 0;
           text-align: right; }
         #content #inner-content #hello .sub-intro {
           font-size: 1rem !important;
